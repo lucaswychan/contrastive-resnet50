@@ -12,7 +12,7 @@
 
 <hr/>
 
-# Contrastive ResNet50
+# Contrastive ResNet-50
 
 ## Abstract
 Contrastive learning is a widely adopted technique for training models to encode representations by maximizing the dissimilarity between differently augmented views of the same data point, while minimizing the similarity between representations of different data points. This approach aims to leverage the inherent structure within the data and is particularly effective in scenarios with limited labeled data. In this study, we utilize SimCLR, a prominent framework in the field of contrastive learning, as a pre-training step to acquire meaningful representations from unlabeled skin lesion images. Through experimental evaluations conducted on the ISIC dataset, we demonstrate significant enhancements in accuracy and robustness compared to traditional supervised learning approaches.
