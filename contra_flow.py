@@ -50,7 +50,7 @@ def contrastive_train(loader_train_cropped) -> list:
             f1, f2 = torch.split(features, [bsz, bsz], dim=0)
             features = torch.cat([f1.unsqueeze(1), f2.unsqueeze(1)], dim=1)
 
-            loss = criterion(features)  # contrastive loss
+            loss = criterion(features, labels)  # contrastive loss
             loss.backward()
             torch.nn.utils.clip_grad_norm_(
                 parameters=contrastive_resnet50.parameters(), max_norm=10
