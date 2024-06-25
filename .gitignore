@@ -2,3 +2,4 @@ venv
 test/
 train/
 val/
+__pycache__/
