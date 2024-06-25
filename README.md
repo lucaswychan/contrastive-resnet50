@@ -15,7 +15,14 @@
 # Contrastive ResNet50
 
 ## Abstract
-The project focuses on developing an optical character recognition (OCR) model for car plate recognition. The workflow includes two stages: model training and transfer learning. In the model training stage, a balanced EMNIST dataset is used to train a ResNet50 model with data augmentation techniques. Transfer learning is then applied in the second stage, where a custom dataset resembling car plate characters is used to fine-tune the pre-trained model. The model parameters and settings are carefully chosen to optimize performance. The trained OCR model is capable of recognizing car plate characters with high accuracy. Preprocessing steps are applied to input images, and the model outputs recognized characters and confidence levels. The model can be easily reused and deployed for future tasks or inference scenarios.
+Contrastive learning is a widely adopted technique for training models to encode representations by maximizing the dissimilarity between differently augmented views of the same data point, while minimizing the similarity between representations of different data points. This approach aims to leverage the inherent structure within the data and is particularly effective in scenarios with limited labeled data. In this study, we utilize SimCLR, a prominent framework in the field of contrastive learning, as a pre-training step to acquire meaningful representations from unlabeled skin lesion images. Through experimental evaluations conducted on the ISIC dataset, we demonstrate significant enhancements in accuracy and robustness compared to traditional supervised learning approaches.
+
+<hr/>
+
+## References
+SimCLR Paper: [SimCLR](https://proceedings.mlr.press/v119/chen20j.html)  
+SupContrast Paper: [Supervised Contrastive Learning](https://proceedings.neurips.cc/paper_files/paper/2020/hash/d89a66c7c80a29b1bdbab0f2a1a94af8-Abstract.html)  
+Code: [SupContrast](https://github.com/HobbitLong/SupContrast)
 
 <hr/>
 
@@ -36,6 +43,20 @@ Then run the following command to train and infer the models.
 ```
 python3 main.py
 ```
+
+<hr/>
+
+## Results
+<div align="center">
+
+|Model|	Test accuracy|	Test AUC|
+| ---------- | -----------|-----------|
+|Baseline|	79.4	|73.1|
+|SimCLR (100 epoch)|	**83.1**|	**78.5**|
+|SimCLR (300 epoch)	|81.5|	76.6|
+|SimCLR (500 epoch)|	80.7|	74.2|
+
+</div>
 
 <hr/>
 
