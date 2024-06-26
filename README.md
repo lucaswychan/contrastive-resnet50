@@ -50,11 +50,11 @@ python3 main.py
 <div align="center">
 
 |Model|	Test accuracy|	Test AUC|
-| ---------- | -----------|-----------|
-|Baseline|	79.4	|73.1|
-|SimCLR (100 epoch)|	**83.1**|	**78.5**|
-|SimCLR (300 epoch)	|81.5|	76.6|
-|SimCLR (500 epoch)|	80.7|	74.2|
+ ---------- | -----------|-----------
+Baseline|	79.4	|73.1
+SimCLR (100 epoch)|	**83.1**|	**78.5**
+SimCLR (300 epoch)	|81.5|	76.6
+SimCLR (500 epoch)|	80.7|	74.2
 
 </div>
 
