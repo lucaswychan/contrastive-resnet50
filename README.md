@@ -46,6 +46,15 @@ python3 main.py
 
 <hr/>
 
+## Loss function
+<div align="center">
+
+$\LARGE Contrastive Loss = l_{i,j} = \frac{{-\log\left(\exp\left({z_i^T z_j}/{\tau}\right)\right)}}{{\sum_{k=1}^{2N}\mathbb{1}_{[k\neq i]} \exp\left({z_i^T z_k}/{\tau}\right)}}$
+
+</div>
+
+<hr/>
+
 ## Results
 <div align="center">
 
