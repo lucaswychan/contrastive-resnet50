@@ -37,11 +37,11 @@ python3 main.py
 
 
 ## Loss function
-<div align="center">
 
-$\LARGE Contrastive Loss = l_{i,j} = \frac{{-\log\left(\exp\left({z_i^T z_j}/{\tau}\right)\right)}}{{\sum_{k=1}^{2N}\mathbb{1}_{[k\neq i]} \exp\left({z_i^T z_k}/{\tau}\right)}}$
+$\LARGE Contrastive Loss = l_{i,j} = -log \frac{ \exp \left( {sim(z_i, z_j)} / {\tau} \right) } { {\sum_{k=1}^{2N} \mathbb{1}_{[k\neq i]} \exp \left ( {sim(z_i, z_k)} / {\tau} \right) } }$
 
-</div>
+where   $sim(\textbf{u}, \textbf{v}) = \frac{ \textbf{u}^T \textbf{v} } { \lVert u \lVert \lVert v \lVert }$
+
 
 
 ## Results
